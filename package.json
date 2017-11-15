@@ -1,0 +1,24 @@
+{
+  "name": "plantparenthood",
+  "version": "1.0.0",
+  "description": "An application for planning succession planting",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emily-plummer/plantparenthood.git"
+  },
+  "author": "Emily Plummer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emily-plummer/plantparenthood/issues"
+  },
+  "homepage": "https://github.com/emily-plummer/plantparenthood#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33"
+  }
+}
