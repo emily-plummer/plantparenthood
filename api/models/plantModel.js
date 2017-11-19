@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
-var Scheme = mongoose.Scheme;
+var Schema = mongoose.Schema;
 
-var plantScheme = new Schema({
+var PlantSchema = new Schema({
   name: {
     type: String,
     required: 'Please enter the name of the plant'

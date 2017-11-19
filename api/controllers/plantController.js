@@ -24,6 +24,14 @@ exports.read_a_plant = function(req, res) {
    });
 }
 
+exports.update_a_plant = function(req,res) {
+  Plant.findOneAndUpdate({_id: req.params.plantId}, req.body, {new: true},
+    function(err, plant) {
+      if (err) res.send(err);
+      res.json(plant);
+    }
+  );
+}
 exports.delete_a_plant = function(req, res) {
   Plant.remove({
     _id: req.params.plantId
