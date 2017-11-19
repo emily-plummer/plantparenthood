@@ -17,10 +17,10 @@
   },
   "homepage": "https://github.com/emily-plummer/plantparenthood#readme",
   "devDependencies": {
-    "nodemon": "^1.12.1"
+    "nodemon": "1.12.1"
   },
   "dependencies": {
-    "express": "^4.16.2",
-    "mongoose": "^4.13.3"
+    "express": "4.16.2",
+    "mongoose": "4.13.3"
   }
 }
