@@ -22,6 +22,6 @@ routes(app); //registering the routes
 
 const port = process.env.PORT || 8000;
 app.listen(port);
-app.use(express.static('app'));
+app.use(express.static(path.resolve(__dirname, '..', 'build')));
 
 console.log(`server started on port ${port}`);
