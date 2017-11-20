@@ -19,7 +19,9 @@ mongoose.connect(db.url)
 
 var routes = require('./api/routes/plantRoutes');
 routes(app); //registering the routes
+
 const port = process.env.PORT || 8000;
 app.listen(port);
+app.use(express.static('app'));
 
 console.log(`server started on port ${port}`);
