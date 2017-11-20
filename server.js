@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const db = require('./config/db');
 const Plant = require('./api/models/plantModel');
+const path = require('path');
 
 
 const app = express();
@@ -22,6 +23,6 @@ routes(app); //registering the routes
 
 const port = process.env.PORT || 8000;
 app.listen(port);
-app.use(express.static(path.resolve(__dirname, '..', 'build')));
+app.use(express.static(path.join(__dirname, 'app/build')));
 
 console.log(`server started on port ${port}`);
