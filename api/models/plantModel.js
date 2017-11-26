@@ -6,19 +6,46 @@ var PlantSchema = new Schema({
     type: String,
     required: 'Please enter the name of the plant'
   },
-  Created_date: {
-    type: Date,
-    default: Date.now
+  quantity: {
+    type: String
   },
-  days_to_germination: {
+  seeds_ordered: {
+    type: Number
+  },
+  type: {
+    type: String
+  },
+  provider: {
+    type: String
+  },
+  days_to_germ: {
     type: Number
   },
   spacing: {
     type: Number
   },
-  sow_weeks: {
+  weeks_to_transplant: {
     type: Number
-  }
+  },
+  days_to_harvest: {
+    type: Number
+  },
+  sow: {
+    type: Number
+  },
+  direct_seed: {
+    type: String
+  },
+  notes: {
+    type: String
+  },
+  harvest: {
+    type: String
+  },
+  Created_date: {
+    type: Date,
+    default: Date.now
+  },
 });
 
 module.exports = mongoose.model('Plants', PlantSchema);
