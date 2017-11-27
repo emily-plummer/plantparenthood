@@ -11,7 +11,10 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.HANDLE_APP_INIT:
-      return state;
+      return {
+        ...state,
+        plants: action.response,
+      }
     default:
       return state;
   }
