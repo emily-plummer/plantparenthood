@@ -17,7 +17,6 @@ const store = createStore(
   )
 );
 
-
 function initializeApp() {
   return function (dispatch) {
     return fetch('https://sheltered-ocean-84444.herokuapp.com/plants', { method: 'GET', mode: 'no-cors'})
