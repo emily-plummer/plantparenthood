@@ -37,4 +37,4 @@ mongoose.connect(db.url)
 var routes = require('./api/routes/plantRoutes');
 routes(app); //registering the routes
 
-//app.use(express.static(path.join(__dirname, 'app/build')));
+app.use(express.static(path.join(__dirname, 'app/build')));
