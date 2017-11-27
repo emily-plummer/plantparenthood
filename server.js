@@ -7,21 +7,6 @@ const path = require('path');
 
 
 const app = express();
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-mongoose.Promise = global.Promise;
-mongoose.connect(db.url)
-  .then(() => console.log('CONNECTED!'))
-  .catch(err => {
-    console.error('App starting error:', err.stack);
-    process.exit(1);
-  });
-
-var routes = require('./api/routes/plantRoutes');
-routes(app); //registering the routes
-
-const port = process.env.PORT || 8000;
 app.listen(port);
 app.use(function (req, res, next) {
 
@@ -37,4 +22,19 @@ app.use(function (req, res, next) {
     // Pass to next layer of middleware
     next();
 });
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+mongoose.Promise = global.Promise;
+mongoose.connect(db.url)
+  .then(() => console.log('CONNECTED!'))
+  .catch(err => {
+    console.error('App starting error:', err.stack);
+    process.exit(1);
+  });
+
+var routes = require('./api/routes/plantRoutes');
+routes(app); //registering the routes
+
+const port = process.env.PORT || 8000;
 //app.use(express.static(path.join(__dirname, 'app/build')));
