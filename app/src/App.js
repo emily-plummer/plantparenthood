@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './App.css';
 import Form from './containers/Form';
-import PlantList from './containers/PlantList';
 
 const App = ({ plants }) => (
   <div className="App">
     <p className="App-intro">
       Plant Parenthood
     </p>
+    <Link to="/plants">See all Plants</Link>
     <Form/>
-    <PlantList />
   </div>
 );
 
