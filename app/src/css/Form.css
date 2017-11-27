@@ -1,0 +1,26 @@
+.plantForm label {
+  margin-right: 15px;
+}
+
+.plantForm div {
+  padding: 5px;
+}
+
+.plantForm {
+  border: 4px solid pink;
+  padding: 30px;
+  display: inline-block;
+  text-align: left;
+}
+
+.plantForm input {
+  border: 0;
+  border-bottom: 2px solid #7FDBFF;
+  font-size: 15px;
+  font-family: 'News Cycle', sans-serif;
+}
+
+.plantForm button {
+  border: 2px solid pink;
+  padding: 10px;
+}
