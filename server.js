@@ -7,6 +7,7 @@ const path = require('path');
 
 
 const app = express();
+const port = process.env.PORT || 8000;
 app.listen(port);
 app.use(function (req, res, next) {
 
@@ -36,5 +37,4 @@ mongoose.connect(db.url)
 var routes = require('./api/routes/plantRoutes');
 routes(app); //registering the routes
 
-const port = process.env.PORT || 8000;
 //app.use(express.static(path.join(__dirname, 'app/build')));
